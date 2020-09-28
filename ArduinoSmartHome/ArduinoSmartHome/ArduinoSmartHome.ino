@@ -15,6 +15,7 @@ else {
   Serial.println("LOW");
 }  
 if(digitalRead(2)==HIGH) {
+  Serial.println("alert");
   digitalWrite(12, HIGH);
   digitalWrite(11, LOW);
   tone(7, 1000, 500);
@@ -25,7 +26,9 @@ if(digitalRead(2)==HIGH) {
   delay(500);
 }
 else {
-digitalWrite(12, LOW);
-digitalWrite(11, LOW);
+  Serial.println("normal");
+  digitalWrite(12, LOW);
+  digitalWrite(11, LOW);
+  delay(1000);
 }
 }
